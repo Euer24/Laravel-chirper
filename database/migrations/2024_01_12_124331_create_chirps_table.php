@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('chirps', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete(); //cascadeOnDelete zorgt ervoor dat als de user verwijderd wordt alle chirps van die user ook verwijderd worden
+            $table->string('message');
             $table->timestamps();
         });
     }
