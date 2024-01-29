@@ -30,9 +30,9 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-//dit maakt ene route voor alle functies in de chirpcontroller de chirps text na resource(chirps) zorgt ervoor dat in de url /chirps komt te staan
+//dit maakt ene route voor alle functies in de chirpcontroller. de chirps na resource(chirps) zorgt ervoor dat in de url /chirps komt te staan
 Route::resource('chirps', ChirpController::class)
-    ->only(['index', 'store']) //dit maakt een route voor alleen de index en store functies
+    ->only(['index', 'store', 'update' ,'destroy']) //dit maakt een route voor alleen de index-store en update functies
     ->middleware(['auth', 'verified']); //de middleware zorgt ervoor dat je ingelogd moet zijn om de functies te kunnen gebruiken
     
 Route::middleware('auth')->group(function () {
