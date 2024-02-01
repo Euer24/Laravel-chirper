@@ -8,6 +8,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import { useForm } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
+
 dayjs.extend(relativeTime);
 
 const  props = defineProps(['chirp']);
@@ -47,6 +48,7 @@ const editing= ref(false);
                         <DropdownLink as="button" :href="route('chirps.destroy', chirp.id)" method="delete">
                             Delete
                         </DropdownLink>
+                       
                     </template>
                 </Dropdown>
             </div>

@@ -1,6 +1,8 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import Card from '@/Components/Card.vue';
 import { Head } from '@inertiajs/vue3';
+
 </script>
 
 <template>
@@ -18,5 +20,20 @@ import { Head } from '@inertiajs/vue3';
                 </div>
             </div>
         </div>
+
+        <div class="grid grid-cols-3 mt-8 gap-5">
+
+            <div class=""></div>
+            <div class="flex justify-center">
+
+                <Card>
+                    <p></p>
+                </Card>
+                
+            </div>
+            <div class=""></div>
+
+        </div>
+    
     </AuthenticatedLayout>
 </template>

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete(); //cascadeOnDelete zorgt ervoor dat als de user verwijderd wordt alle chirps van die user ook verwijderd worden
             $table->string('message');
             $table->timestamps();
+            $table->integer('likes')->default(0);
         });
     }
 
