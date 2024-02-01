@@ -41,4 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/tailwind' , function(){
+   return Inertia::render('Tailwind');
+})->name('tailwind');
 require __DIR__.'/auth.php';
